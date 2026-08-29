@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://locahost:3306/user_db?createDatabaseIfNotExist=true
+    username: root;
+    password: 1001;
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+
+
+  server:
+    post: 8081
+
+
+
+ # JWT Configs
+  jwt:
+    secret:
+    expiration:
+    refresh-expiration:
+
+
+# AWS Configs
+  aws:
+    access-key:
+    secret-key:
+    region:
+    s3:
+      bucket-name:
+
+
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: health, info
