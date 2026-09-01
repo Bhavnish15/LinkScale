@@ -18,10 +18,7 @@ import software.amazon.awssdk.services.s3.model.DeleteObjectRequest;
 import software.amazon.awssdk.services.s3.model.GetUrlRequest;
 import software.amazon.awssdk.services.s3.model.PutObjectRequest;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -190,7 +187,7 @@ public class UserService {
     }
 
     private String getFileExtension(String filename) {
-        if(filename == "" || !filename.contains(".")) return null;
+        if(Objects.equals(filename, "") || !filename.contains(".")) return null;
         return filename.substring(filename.lastIndexOf("."));
     }
 
