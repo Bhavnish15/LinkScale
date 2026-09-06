@@ -210,6 +210,10 @@ public class UserService {
 
         return userResponse;
     }
+
+    public String rejectConnection(String connectionId) {
+        return "Create this method in userService";
+    }
 }
 
 

@@ -65,7 +65,7 @@ public class PostService {
 
         Map<String, Object> PostCreatedEvent = new HashMap<>();
 
-        PostCreatedEvent.put("id", savedPost.getId());
+        PostCreatedEvent.put("postId", savedPost.getId());
         PostCreatedEvent.put("authorId", savedPost.getAuthorId());
         PostCreatedEvent.put("content", savedPost.getContent());
         PostCreatedEvent.put("imageUrl", savedPost.getImageUrl());
