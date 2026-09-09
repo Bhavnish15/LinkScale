@@ -1,4 +1,4 @@
-# 🚀 LinkScale
+#                               LinkScale
 
 ### A Production-Style Distributed Social Platform Built with Spring Boot & Microservices
 
